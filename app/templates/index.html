@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{{ url_for("getting_anime")}}" method="post">
+    <label for="anime">anime name:</label>
+    <input type="text" id="anime" name="anim" placeholder="ex : n">
+
+    <button type="submit">Login</button>
+
+    {% if anime_end %}
+        <h3>Output:</h3>
+        <p>{{ anime_end }}</p>
+    {% endif %}
+</body>
+</html>

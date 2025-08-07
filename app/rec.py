@@ -26,9 +26,8 @@ def get_recommendations(title, n):
     }
 
     top_recommendations = pd.DataFrame(results)
-    top_recommendations[["anime_id", "sim_score"]] = pd.DataFrame(
-        top_recommendations["similarity"].tolist(), index=top_recommendations.index
-    )
+    top_recommendations[["anime_id","sim_score"]] = pd.DataFrame(top_recommendations["similarity"].tolist(),index=top_recommendations.index)
+
+    
     return top_recommendations
 
-print(get_recommendations("Cowboy Bebop", 5))
